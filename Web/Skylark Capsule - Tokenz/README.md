@@ -19,7 +19,7 @@ Came back on the website starting page, we see that now we can get our capsule's
 
 ![Get specs](Get_Specs.PNG)
 
-Let's start Burp suit to catch out which informations go trough the network.
+Let's start Burp suit to catch out which informations go trough the network when we click on that button.
 
 ![Burp catch](Burp.PNG)
 
