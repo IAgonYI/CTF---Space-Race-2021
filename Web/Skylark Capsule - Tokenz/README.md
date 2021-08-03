@@ -52,7 +52,7 @@ So now, we got the signature, let's create our fake admin JWT.
 
 Let's get back on jwt.io and replace id and username label without forget to enter the signature :
 
-![Admin token creation](Admin_token.PNG)
+![Admin token creation](Admin_jwt.PNG)
 
 And now, we return on Burp suite, send the query to the repeater, modify the token with the one we just created, and forward it ! 
 Finaly we did it ! Here's the flag !
