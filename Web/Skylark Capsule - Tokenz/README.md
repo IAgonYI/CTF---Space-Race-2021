@@ -9,7 +9,7 @@
 ![Website starting page](Acceuil_du_site.PNG)
 
 We quickly understand that we have to create an account to see what's happend when we are connected, to look at our capsule's specs. 
-So we go on the register page and create and fake account like : id -> Test email -> pwned@gmail.com password -> 12345
+So we go on the register page and create a fake account like : id -> Test email -> pwned@gmail.com password -> 12345
 
 ![Account Creation](Register.PNG)
 
@@ -23,8 +23,8 @@ Let's start Burp suit to catch out which informations go trough the network when
 
 ![Burp catch](Burp.PNG)
 
-So redirecting the query to the Brup's proxy, we find out something quite interesting ! 
-The label "Authorization" contain something that look exactly like a JSON Web Token (Like the title of this challenge, what a surprise)
+So redirecting the query to the Burp's proxy, we find out something quite interesting ! 
+The label "Authorization" contains something that look exactly like a JSON Web Token (Like the title of this challenge, what a surprise)
 Ok so now we got the JWT of our account, let's decode it to understand a little bit more what's going on. 
 I went on : https://jwt.io/, which is a pretty good tool to analyse and modify a JWT Token 
 
@@ -33,7 +33,7 @@ I went on : https://jwt.io/, which is a pretty good tool to analyse and modify a
 ## Create a fake admin token
 
 The token contain an id and an username, so we are going to test if we put id = 1 and username = admin, to see what's going on.
-Ok we already did a good job, but unfortunatly, the JWT has a signature... That's a bad news because we got to find out this signature.
+Ok we already did a good job, but unfortunatly, the JWT has a signature... That's a bad news because we have to find out this signature.
 The signature is used to know if the token has been created by the website.
 We are going to use John The Ripper, a great cracking tool available on Kali linux, which integrate a functionality to hack JWT signature.
 So let's use it !
