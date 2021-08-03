@@ -33,7 +33,7 @@ I went on : https://jwt.io/, which is a pretty good tool to analyse and modify a
 ## Create a fake admin token
 
 The token contain an id and an username, so we are going to test if we put id = 1 and username = admin, to see what's going on.
-Ok we already did a good job, but unfortunatly, the JWT got a signature... That's a bad news because we got to find out this signature.
+Ok we already did a good job, but unfortunatly, the JWT has a signature... That's a bad news because we got to find out this signature.
 The signature is used to know if the token has been created by the website.
 We are going to use John The Ripper, a great cracking tool available on Kali linux, which integrate a functionality to hack JWT signature.
 So let's use it !
